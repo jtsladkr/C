@@ -1,0 +1,18 @@
+//수를 입력받아 중첩하여 계속 더하는 프로그램
+
+#include <stdio.h>
+ 
+int main()
+{
+int a;
+printf("몇까지의 수를 더 할까요? : "); //입력받아 그 수까지 계속 중첩하여 더하기
+scanf("%d", &a); //scanf로 그 값을 입력받기
+
+int n, sum=0;
+for (n=0; n<=a; n++) //n<=a와 n++ 증감연산잔자를 씀으로써 a의 수까지 n+1해서 중첩해서 더하기
+{
+  sum=sum+n; //계속 중첩하여 a까지의 수를 계속 더하기
+}
+printf("%d입니다", sum);
+return 0;
+}
