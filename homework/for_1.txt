@@ -3,12 +3,13 @@
 #include <stdio.h>
 
 int main() {
-    int c;
-    printf("반복할 횟수를 입력하세요: ");
-    scanf("%d", &c);
+    int c; //박수 횟수를 입력받을 변수
+    printf("반복할 횟수를 입력하세요: "); //입력받기 위해
+    scanf("%d", &c); //입력받은 값을 저장하기 위해
 
     int i;
-    for (i = 0; i < c; i++) {
+    for (i = 1; i <= c; i++)  //입력받은 값을 초기화하고 증감연산자를 활용해 입력받은 c의 횟수만큼 짝을 외친다 언제까지? i가 c의 횟수를 채울때 까지
+    {
         printf("짝! ");
     }
     printf("\n");
