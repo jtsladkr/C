@@ -13,5 +13,5 @@ void disp_car(int car_number, int distance)
         printf("*"); //계속 하나씩 *를  더해가며 출력해 자동차의 위치를 표시
     }
     
-    printf("\n"); // 줄바꿈
+    printf("\n"); //줄바꿈
 }
