@@ -1,0 +1,20 @@
+int main(void)
+{ 
+    int i;
+    int car1_dist = 0, car2_dist = 0;
+    srand((unsigned)time(NULL)); // 시드값을 현재 시간으로 설정하여 난수 생성 초기화
+    
+    for (i = 0; i < 6; i++) {
+        car1_dist += rand() % 100; // 0부터 99 사이의 난수를 생성하여 car1_dist에 더함
+        car2_dist += rand() % 100; // 0부터 99 사이의 난수를 생성하여 car2_dist에 더함
+        
+        disp_car(1, car1_dist); // disp_car 함수를 호출하여 차량 1의 거리와 시각적으로 표시
+        disp_car(2, car2_dist); // disp_car 함수를 호출하여 차량 2의 거리와 시각적으로 표시
+        
+        printf("---------------------\n"); // 구분선 출력
+        
+        _getch(); // 사용자로부터 키 입력을 받음 (Windows 환경에서만 사용 가능)
+    }
+    
+    return 0;
+}

@@ -1,0 +1,18 @@
+#include <math.h>
+#include <stdio.h>
+
+int main(void)
+{
+    double pi = 3.1415926535;
+    double x, y;
+    
+    x = pi / 2; // x에 pi/2 값을 할당하여 각도를 지정
+    
+    y = sin(x); // sin 함수를 사용하여 x에 대한 사인 값을 계산하여 y에 저장
+    printf("sin(%f) = %f\n", x, y); // x와 y를 출력하여 sin 값 표시
+    
+    y = cos(x); // cos 함수를 사용하여 x에 대한 코사인 값을 계산하여 y에 저장
+    printf("cos(%f) = %f\n", x, y); // x와 y를 출력하여 cos 값 표시
+    
+    return 0;
+}
