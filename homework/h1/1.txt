@@ -27,6 +27,6 @@ int main(void)
 
 int coin_toss(void)
 {
-    int head = rand() % 2;  // 0 또는 1을 반환하는 난수 생성
-    return head;  // 생성된 난수 반환
+    int head = rand() % 2;  //0 또는 1을 반환하는 난수 생성
+    return head; 
 }
