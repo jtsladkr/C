@@ -6,7 +6,7 @@
 void disp_car(int car_number, int distance)
 {
     int i; //변수 i 선언
-    printf("CAR #%d", car_number);  //자동차 거
+    printf("CAR #%d", car_number);  //자동차번호를 출력
     for (i = 0; i < distance / 10; i++) {
         printf("*");  //자동차가 나간 거리에 따라 별표 출력
     }
@@ -23,8 +23,8 @@ int main(void)
     for (i = 0; i < 6; i++) {
         car1_dist += rand() % 100;  //자동차1의 거리를 0에서 99까지중 아무 난수를 설정하기 위한 코드
         car2_dist += rand() % 100;  //자동차2의 거리를 0에서 99까지중 아무 난수를 설정하기 위한 코드
-        disp_car(1, car1_dist);  //car1의 번호와 현재 거리를 출력
-        disp_car(2, car2_dist);  //car2의 번호와 현재 거리를 출력
+        disp_car(1, car1_dist);  //자동차 번호와 난수를 받은 거리를 출력
+        disp_car(2, car2_dist);  //자동차 번호와 난수를 받은 거리를 출력
         printf("-------------\n");  //자동차 1과 2를 구분하기 위한 선
         _getch();  //키 입력 대기
     }
