@@ -8,9 +8,9 @@ int coin_toss(void);  //함수 coin_toss 선언
 
 int main(void)
 {
-    int toss;
-    int heads = 0;
-    int tails = 0;
+    int toss; //변수 toss 선언
+    int heads = 0; //변수 heads 선언함과 동시에 0으로 설정
+    int tails = 0; //변수 tails 선언함과 동시에 0으로 설정
     srand((unsigned)time(NULL));  //난수 생성을 위해서 시드를 설정하는 코드(?)
 
     for (toss = 0; toss < 100; toss++) //toss의 값을 0으로 초기화시키고 toss이 값이 100을 넘기기전까지 +1되어 반복해 실행하는 코드
