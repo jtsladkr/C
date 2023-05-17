@@ -1,16 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS // scanf 함수의 보안 경고를 무시하기 위한 전처리기 지시문
+
+#include <math.h>
 #include <stdio.h>
-#include <time.h>
+
 int main(void)
 {
-time_t start, end; // time_t는 unsigned long과 동일하다.
-start = time(NULL);
-printf("10초가 되면 아무 키나 누르세요\n");
-while (1) {
-if (getchar())
-break;
-}
-printf("종료되었습니다.\n");
-end = time(NULL);
-printf("경과된 시간은 %ld 초입니다. \n", end - start);
-return 0;
+    double height, distance, tree_height, degrees, radians;
+    
+    printf("나무와의 길이(단위는 미터): ");
+    scanf("%lf", &distance); // 사용자로부터 나무와의 거리 입력 받음
+    
+    printf("측정자의 키(단위는 미터): ");
+    scanf("%lf", &height); // 사용자로부터 측정자의 키 입력 받음
+    
+    printf("각도(단위는 도): ");
+    scanf("%lf", &degrees); // 사용자로부터 각도 입력 받음
+    
+    radians = degrees * (3.141592 / 180.0); // 입력된 각도를 라디안 단위로 변환하여 radians 변수에 저장
+    
+    tree_height = tan(radians) * distance + height; // 나무의 높이 계산
+    
+    printf("나무의 높이(단위는 미터): %lf \n", tree_height); // 나무의 높이 출력
+    
+    return 0;
 }
