@@ -6,12 +6,27 @@
 void disp_car(int car_number, int distance)
 {
     int i; //변수 i 선언
-    
-    printf("CAR #%d:", car_number); //자동차 넘버 출력
-    
-    for (i = 0; i < distance / 10; i++) { i는 0이고 또한 i는 distance보다 작아야하며 i++은 증감연산자를 활용하여 계속 돌아감
-        printf("*"); //계속 하나씩 *를  더해가며 출력해 자동차의 위치를 표시
+    printf("CAR #%d", car_number);  //자동차 거
+    for (i = 0; i < distance / 10; i++) {
+        printf("*");  //자동차가 나간 거리에 따라 별표 출력
     }
-    
     printf("\n"); //줄바꿈
+}
+
+int main(void)
+{
+    int i;
+    int car1_dist = 0, car2_dist = 0;
+
+    srand((unsigned)time(NULL));  //난수 생성을 위해서 시드를 설정하는 코드(?)
+
+    for (i = 0; i < 6; i++) {
+        car1_dist += rand() % 100;  //자동차1의 거리를 0에서 99까지중 아무 난수를 설정하기 위한 코드
+        car2_dist += rand() % 100;  //자동차2의 거리를 0에서 99까지중 아무 난수를 설정하기 위한 코드
+        disp_car(1, car1_dist);  //car1의 번호와 현재 거리를 출력
+        disp_car(2, car2_dist);  //car2의 번호와 현재 거리를 출력
+        printf("-------------\n");  //자동차 1과 2를 구분하기 위한 선
+        _getch();  //키 입력 대기
+    }
+    return 0;
 }
