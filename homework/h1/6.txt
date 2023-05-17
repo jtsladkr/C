@@ -1,0 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS // scanf를 사용하기 위해 쓰는 코드 없이 쓰면 오류 걸릴 수도 있음 없이 쓰려면 scanf_s로 써야하는 걸로 앎
+
+#include <math.h>
+#include <stdio.h>
+
+int main(void)
+{
+    double height, distance, tree_height, degrees, radians;
+    
+    printf("나무와의 길이(단위는 미터): ");
+    scanf("%lf", &distance); //scanf를 활용해 사용자에게 나무와의 거리를 입력 받는 코드
+    
+    printf("측정자의 키(단위는 미터): ");
+    scanf("%lf", &height); //scanf를 활용해 사용자에게 측정자의 키를입력 받는 코드
+    
+    printf("각도(단위는 도): ");
+    scanf("%lf", &degrees); //scanf를 활용해 사용자에게 각도를 입력 받음
+    
+    radians = degrees * (3.141592 / 180.0); //입력된 각도를 라디안 단위로 변환하여 radians 변수에 저장
+    
+    tree_height = tan(radians) * distance + height; //사용자로부터 받은 정보들을 공식을 활용해 나무의 높이 계산
+    
+    printf("나무의 높이(단위는 미터): %lf \n", tree_height); //그 계산한 값을 출력
+    
+    return 0;
+}

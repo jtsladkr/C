@@ -1,0 +1,15 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+int main(void)
+{
+    system("dir"); //시스템 명령어 'dir'을 실행하여 현재 디렉토리의 파일 및 폴더 목록을 출력
+    
+    printf("아무 키나 치세요\n"); //아무 키나 치세요를 출력
+    
+    _getch(); 
+    
+    system("cls"); //시스템 명령어 'cls'를 실행하여 화면을 지움
+    
+    return 0;
+}
