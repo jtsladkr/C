@@ -18,9 +18,9 @@ int main(void)
     
     radians = degrees * (3.141592 / 180.0); //입력된 각도를 라디안 단위로 변환하여 radians 변수에 저장
     
-    tree_height = tan(radians) * distance + height; // 나무의 높이 계산
+    tree_height = tan(radians) * distance + height; //사용자로부터 받은 정보들을 공식을 활용해 나무의 높이 계산
     
-    printf("나무의 높이(단위는 미터): %lf \n", tree_height); // 나무의 높이 출력
+    printf("나무의 높이(단위는 미터): %lf \n", tree_height); //그 계산한 값을 출력
     
     return 0;
 }
