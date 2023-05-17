@@ -1,26 +1,25 @@
-#define _CRT_SECURE_NO_WARNINGS // scanf 함수의 보안 경고를 무시하기 위한 전처리기 지시문
-
-#include <math.h>
 #include <stdio.h>
+#include <math.h>
+#define PI 3.141592
 
+double rad(double degree)
+{
+  return PI * degree / 180.0;
+}
+
+void drawbar(int height)
+{
+  for(int i=0; i<height; i++)
+    printf("*");
+  printf("\n");
+}
 int main(void)
 {
-    double height, distance, tree_height, degrees, radians;
-    
-    printf("나무와의 길이(단위는 미터): ");
-    scanf("%lf", &distance); // 사용자로부터 나무와의 거리 입력 받음
-    
-    printf("측정자의 키(단위는 미터): ");
-    scanf("%lf", &height); // 사용자로부터 측정자의 키 입력 받음
-    
-    printf("각도(단위는 도): ");
-    scanf("%lf", &degrees); // 사용자로부터 각도 입력 받음
-    
-    radians = degrees * (3.141592 / 180.0); // 입력된 각도를 라디안 단위로 변환하여 radians 변수에 저장
-    
-    tree_height = tan(radians) * distance + height; // 나무의 높이 계산
-    
-    printf("나무의 높이(단위는 미터): %lf \n", tree_height); // 나무의 높이 출력
-    
-    return 0;
-}
+  int degree, x, y;
+  for(degree=0; degree<=90; degree +=10)
+    {
+      y = (int)(60 * sin(rad((double)degree)) + 0.5);
+      drawbar(y);
+    }
+  return 0;
+  }
