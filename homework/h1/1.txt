@@ -4,28 +4,28 @@
 #include <stdio.h>
 #include <time.h>
 
-int main(void);
+int coin_toss(void);  //함수 coin_toss 선언
 
 int main(void)
 {
-  int toss;
-  int heads = 0;
-  int tails = 0;
-  srand((unsigned)time(NULL));
+    int toss;
+    int heads = 0;
+    int tails = 0;
+    srand((unsigned)time(NULL));  //난수 생성을 위한 시드 설정
 
-  for(toss = 0; toss<100; toss++){
-    if(coin_toss() == 1)
-      heads++;
-    else
-      tails++;
-  }
-  printf("동전의 앞면:%d\n", heads);
-  printf("동전의 뒷면:%d\n", tails);
-  return 0;
+    for (toss = 0; toss < 100; toss++) {
+        if (coin_toss() == 1)
+            heads++;  // 동전 앞면인 경우 heads 변수 증가
+        else
+            tails++;  // 동전 뒷면인 경우 tails 변수 증가
+    }
+    printf("동전의 앞면: %d\n", heads);  // 앞면 횟수 출력
+    printf("동전의 뒷면: %d\n", tails);  // 뒷면 횟수 출력
+    return 0;
 }
 
 int coin_toss(void)
 {
-  int head = rand() % 2;
-  return head;
+    int head = rand() % 2;  // 0 또는 1을 반환하는 난수 생성
+    return head;  // 생성된 난수 반환
 }
