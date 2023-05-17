@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS // scanf 함수의 보안 경고를 무시하기 위한 전처리기 지시문
+#define _CRT_SECURE_NO_WARNINGS // scanf를 사용하기 위해 쓰는 코드 없이 쓰면 오류 걸릴 수도 있음 없이 쓰려면 scanf_s로 써야하는 걸로 앎
 
 #include <math.h>
 #include <stdio.h>
