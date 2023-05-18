@@ -7,15 +7,15 @@ double rad(double degree) //rad
   return PI * degree / 180.0; 
 }
 
-void drawbar(int height) //height 
+void drawbar(int height) //height 함수 선언
 {
-  for(int i=0; i<height; i++)
-    printf("*");
-  printf("\n");
+  for(int i=0; i<height; i++) //i값을 0으로 초기화하고 또한 i는 height보다 작을 때까지 계속 반복함
+    printf("*"); //수에 맞기 *을 출력
+  printf("\n"); //줄바꿈
 }
-int main(void)
+int main(void) //
 {
-  int degree, x, y; 
+  int degree, x, y; //
   for(degree=0; degree<=90; degree +=10)
     {
       y = (int)(60 * sin(rad((double)degree)) + 0.5);
