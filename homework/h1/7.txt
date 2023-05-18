@@ -2,7 +2,7 @@
 #include <math.h> //라디안같은 단어를 쓰기 위한 수학용 헤더
 #define PI 3.141592 //PI값의 3.14라는 것을 정의하는 함수임
 
-double rad(double degree) 
+double rad(double degree) //rad
 {
   return PI * degree / 180.0; 
 }
@@ -15,7 +15,7 @@ void drawbar(int height) //height
 }
 int main(void)
 {
-  int degree, x, y;
+  int degree, x, y; 
   for(degree=0; degree<=90; degree +=10)
     {
       y = (int)(60 * sin(rad((double)degree)) + 0.5);
